@@ -271,6 +271,19 @@ body {
 
 /* Mobil ve Küçük Ekranlar İçin Duyarlı Tasarım (Responsive) */
 @media (max-width: 520px) {
+
+  /* Yetkinlik etiketlerini mobilde alt alta ve tam genişlik yapıyoruz */
+  .skills-container {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .skill-tag {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
   .portfolio-card {
     padding: 24px; /* Kart içi boşlukları mobilde daralttık */
     border-radius: 12px;
