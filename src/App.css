@@ -1,0 +1,270 @@
+:root {
+  --bg-main: #f1f5f9;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #334155;
+  --border-color: #cbd5e1;
+  --button-bg: #0f172a;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-container {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.portfolio-card {
+  background-color: var(--card-bg);
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  max-width: 540px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.name-title {
+  color: var(--text-main) !important; 
+  font-size: 2.75rem; 
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0 0 28px 0;
+}
+
+.bio-section {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0 0 32px 0;
+}
+
+.skills-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.skill-tag {
+  background-color: #f8fafc;
+  color: var(--text-main);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 32px 0;
+}
+
+.counter-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.counter-box {
+  flex: 1;
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  padding: 24px 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.counter-number {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.counter-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.action-button {
+  background-color: var(--button-bg);
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity 0.15s ease;
+}
+
+.action-button:hover {
+  opacity: 0.9;
+}
+
+/* Göster/Gizle Buton Stili */
+.toggle-section {
+  display: flex;
+  justify-content: center;
+}
+
+.toggle-button {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 2px solid var(--text-main);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.toggle-button:hover, .toggle-button.active {
+  background-color: var(--text-main);
+  color: #ffffff;
+}
+
+/* Proje Bölümü ve Filtreler */
+.projects-section {
+  margin-top: 24px;
+}
+
+.filter-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  flex: 1;
+  background-color: #ffffff;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.filter-btn:hover, .filter-btn.selected {
+  background-color: #e2e8f0;
+  color: var(--text-main);
+  border-color: #94a3b8;
+}
+
+/* Proje Ögeleri Listesi */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-item {
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+}
+
+.project-item h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  padding-right: 80px; /* Tag ile çakışmasın */
+}
+
+.project-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.project-type-tag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background-color: #e2e8f0;
+  color: var(--text-main);
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+/* Yeni Nesil Animasyon Kapsayıcısı */
+.projects-wrapper {
+  display: grid;
+  grid-template-rows: 0fr; /* Yükseklik çarpanı başlangıçta sıfır */
+  transition: grid-template-rows 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Butona basıldığında devreye girecek sınıf */
+.projects-wrapper.expanded {
+  grid-template-rows: 1fr; /* Yükseklik çarpanı tam boyuta esner */
+  margin-top: 24px;
+}
+
+/* İçeriğin scroll-bar tetiklemesini engelleyen iç kapsayıcı */
+.projects-section {
+  min-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.projects-wrapper.expanded .projects-section {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Kartların yumuşak süzülme efekti */
+.project-item {
+  transform: translateY(8px);
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.projects-wrapper.expanded .project-item {
+  transform: translateY(0);
+}
