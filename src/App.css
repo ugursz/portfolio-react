@@ -268,3 +268,70 @@ body {
 .projects-wrapper.expanded .project-item {
   transform: translateY(0);
 }
+
+/* Mobil ve Küçük Ekranlar İçin Duyarlı Tasarım (Responsive) */
+@media (max-width: 520px) {
+  .portfolio-card {
+    padding: 24px; /* Kart içi boşlukları mobilde daralttık */
+    border-radius: 12px;
+  }
+
+  .name-title {
+    font-size: 2rem; /* Başlığı mobilde biraz küçülttük */
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .bio-section {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+  /* Yan yana duran sayaç kutularını alt alta alıyoruz */
+  .counter-section {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .counter-box {
+    padding: 16px;
+    width: 100%;
+  }
+
+  .counter-number {
+    font-size: 1.75rem;
+  }
+
+  /* Filtre butonlarını mobilde alt alta sıkışmasın diye dikey yapıyoruz */
+  .filter-container {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .filter-btn {
+    padding: 10px;
+  }
+
+  /* Proje kartlarının içindeki etiket yerleşimini mobilde optimize ediyoruz */
+  .project-item {
+    padding: 16px;
+  }
+  
+  .project-item h3 {
+    font-size: 1rem;
+    padding-right: 0;
+    margin-bottom: 24px; /* Tag için alt tarafta boşluk açtık */
+  }
+
+  .project-type-tag {
+    position: relative;
+    top: auto;
+    right: auto;
+    display: inline-block;
+    margin-top: 8px;
+  }
+}
